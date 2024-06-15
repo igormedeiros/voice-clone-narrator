@@ -1,0 +1,5 @@
+TTS==0.21.*
+pydub
+torch
+torchaudio
+tqdm

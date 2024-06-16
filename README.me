@@ -12,8 +12,8 @@ This project is a text-to-speech (TTS) converter that uses the Coqui TTS library
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/your-username/your-repository.git
-    cd your-repository
+    git clone https://github.com/igormedeiros/voice-clone-narrator.git
+    cd voice-clone-narrator
     ```
 
 2. Create a virtual environment and activate it:
@@ -37,7 +37,7 @@ This project is a text-to-speech (TTS) converter that uses the Coqui TTS library
 Run the script with the necessary parameters:
 
 ```bash
-python main.py --text_file "path/to/your/textfile.txt" --output_path "output.wav" --speed 1.0 --language "pt" --sample_voice "./voices/sample-voice.wav"
+python main.py --text_file "path/to/your/textfile.txt" --output_path "output.wav" --speed 1.0 --language "pt" --sample_voice "./voices/sample-voice.wav" --thumb "path/to/your/thumbnail.jpg"
 
 Parameters
 --text_file: Path to the text file to be converted to speech.
@@ -45,20 +45,32 @@ Parameters
 --speed: Speech speed (optional, default is 1.0).
 --language: Speech language (optional, default is "pt").
 --sample_voice: Path to the sample voice file.
+--thumb: Path to the thumbnail image for MP4 output (optional).
 
-your-repository/
+## Logging
+
+Each run of the program generates a log file named "narrator" followed by the date and time of execution, with the extension .log.
+
+## Output
+
+- If `--thumb` is provided, the output will be an MP4 file with the audio and the thumbnail image as a static video.
+- If `--thumb` is not provided, the output will be a WAV audio file.
+
+## Project Structure
+
+voice-clone-narrator/
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
 ├── main.py
 └── voices/
-└── sample-voice.wav
 
-Contribution
+## Contribution
+
 Feel free to contribute to the project! Just follow the steps below:
 
-Fork the project
-Create a new branch (git checkout -b feature/new-feature)
-Commit your changes (git commit -am 'Add new feature')
-Push to the branch (git push origin feature/new-feature)
-Create a new Pull Request
+1. Fork the project
+2. Create a new branch (git checkout -b feature/new-feature)
+3. Commit your changes (git commit -am 'Add new feature')
+4. Push to the branch (git push origin feature/new-feature)
+5. Create a new Pull Request
